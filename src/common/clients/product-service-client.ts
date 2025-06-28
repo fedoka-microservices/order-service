@@ -7,8 +7,8 @@ import { NATS_SERVICE } from "src/orders/config/services";
 
 
 @Injectable()
-export class ProductServiceClientTCP {
-    private readonly logger = new Logger('Product-service-client-tcp');
+export class ProductServiceClient {
+    private readonly logger = new Logger('Product-service-client');
     constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy){}
     
     async validateProducts(ids:number[]):Promise<ProductDto[]> {

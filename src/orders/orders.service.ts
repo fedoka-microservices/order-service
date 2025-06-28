@@ -4,12 +4,12 @@ import { PrismaService } from 'prisma/prisma.service';
 import { RpcException } from '@nestjs/microservices';
 import { OrderPaginationDto } from './dto/order-pagination.dto';
 import { ChangeOrderStatusDto } from './dto/change-order-status.dto';
-import { ProductServiceClientTCP } from 'src/common/clients/product-service-client';
+import { ProductServiceClient} from 'src/common/clients/product-service-client';
 
 
 @Injectable()
 export class OrdersService {
-  constructor(private readonly prismaService: PrismaService, private readonly productServiceClientTCP: ProductServiceClientTCP){}
+  constructor(private readonly prismaService: PrismaService, private readonly productServiceClientTCP: ProductServiceClient){}
 
   async create(createOrderDto: CreateOrderDto) {
     const ids = createOrderDto.items.map(item => item.productId);
