@@ -4,7 +4,7 @@ import { PrismaService } from 'prisma/prisma.service';
 import { RpcException } from '@nestjs/microservices';
 import { OrderPaginationDto } from './dto/order-pagination.dto';
 import { ChangeOrderStatusDto } from './dto/change-order-status.dto';
-import { ProductServiceClientTCP } from 'src/common/clients/product-service-client.tcp';
+import { ProductServiceClientTCP } from 'src/common/clients/product-service-client';
 
 
 @Injectable()

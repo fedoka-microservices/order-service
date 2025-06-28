@@ -1,11 +1,11 @@
 import 'dotenv/config'
 import * as joi from 'joi'
-import { PRODUCT_SERVICE } from './services';
+// import { PRODUCT_SERVICE } from './services';
 
 interface EnvVars {
     PORT:number;
-    PRODUCT_SERVICE_HOST?: string;
-    PRODUCT_SERVICE_PORT?: number;
+    // PRODUCT_SERVICE_HOST?: string;
+    // PRODUCT_SERVICE_PORT?: number;
     NATS_SERVERS: string[];
 }
 
@@ -32,7 +32,7 @@ const envVars: EnvVars = value;
 
 export const envs = {
     port: envVars.PORT,
-    productServiceHost: envVars.PRODUCT_SERVICE_HOST,
-    productServicesPort: envVars.PRODUCT_SERVICE_PORT,
+    // productServiceHost: envVars.PRODUCT_SERVICE_HOST,
+    // productServicesPort: envVars.PRODUCT_SERVICE_PORT,
     natsServers: envVars.NATS_SERVERS
 }
